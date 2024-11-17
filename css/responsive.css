@@ -1,26 +1,24 @@
+/* Media query for screen sizes 1200px or less */
 @media screen and (max-width: 1200px) {
 
-    /* .main-nav {
-        color: blue;
-    } */
-
     :root {
-        font-size: 20px;
+        font-size: 20px;        /* Reduces the base font size for better readability */
     }
 
     .section {
-        width: 800px;
+        width: 800px;           /* Decrease the section width */
         padding: 50px 0;
     }
 
     .holly-icon {
-        top: 0px;
+        top: 0px;               /* Adjust holly icon positioning */
     }
 
     .pic-slider {
-        width: 875px;
+        width: 875px;           /* Decrease width of the picture slider */
     }
 
+    /* Reduce the height of sections for smaller screens */
     #section1 {
         height: 900px;
     };
@@ -38,23 +36,21 @@
         height: 800px;
     }
 
+    /* Reduce the flex space of the left child in the details section */
     .details .left-child {
         flex: 2;
     }
 
 }
 
-
+/* Media query for screen sizes 900px or less */
 @media screen and (max-width: 900px) {
 
-    /* .main-nav {
-        color: orange;
-    } */
-
     :root {
-        font-size: 16px;
+        font-size: 16px;            /* Further reduce font size */
     }
 
+    /* Adjust heading margins for smaller screens */
     h2 {
         margin-bottom: -40px;
     }
@@ -64,22 +60,14 @@
     }
 
     .pic-slider {
-        width: 550px;
+        width: 550px;               /* Decrease width of the picture slider */
     }
 
     .reindeer-left, .reindeer-right {
-        width: 75px;
+        width: 75px;                /* Smaller reindeer images */
     }
 
-    .section {
-        width: 600px;
-        font-size: 4rem;
-    }
-
-    #section2 {
-        height: 1200px;
-    }
-
+    /* Center products in a column layout */
     .product {
         padding: 20px 0;
     }
@@ -88,6 +76,16 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+    }
+
+    .section {
+        width: 600px;               /* Further reduce section width */
+        font-size: 4rem;            /* Reduce font size */
+    }
+
+    /* Adjust heights for sections */
+    #section2 {
+        height: 1200px;
     }
 
     #section3 {
@@ -111,12 +109,13 @@
         height: 300px;
     }
 
+    /* Reduce the font size of sale */
     #sale {
         font-size: 5rem;
     }
 
     .content p, #discount {
-        margin-bottom: -30px;
+        margin-bottom: -30px;       /* Adjust paragraph margins */
     }
 
     .holly-icon {
@@ -126,7 +125,7 @@
 
     .learn-more {
         width: 200px;
-        margin: 0 50px;
+        margin: 0 50px;             /* Adjust button margin and width */
     }
 
     .learn-more p {
@@ -136,15 +135,15 @@
     }
 
     .divider {
-        width: 400px;
+        width: 400px;               /* Adjust divider width */
     }
 
     .user-form input {
-        width: 300px;
+        width: 300px;               /* Reduce input width in the form */
     }
 
     .buy-now, .submit {
-        font-size: 1.5rem;
+        font-size: 1.5rem;          /* Increase font size for better visibility */
     }
 
     .buy-now p {
@@ -152,7 +151,7 @@
     }
 
     .details .left-child {
-        margin-right: 10px;
+        margin-right: 10px;         /* Add margin to the left-child */
     }
 
     .social-medias {
@@ -163,9 +162,10 @@
 
     .social-medias .image-wrapper {
         height: 40px;
-        width: 40px;
+        width: 40px;                /* Adjust social media icon size */
     }
 
+    /* Adjust hover text size and position */
     .hover-text {
         top: -5px;
         right: 170px;
@@ -174,35 +174,33 @@
 
 }
 
+/* Media query for screen sizes 600px or less */
 @media screen and (max-width: 600px) {
 
-    /* .main-nav {
-        color: purple;
-    } */
-
-    body {
-        /* overflow-x: unset; */
-    }
-
+    /* Base font size for mobile/smaller screens */
     :root {
-        font-size: 12px;
+        font-size: 12px;            
     }
 
+    /* Reduce the section width */
     .section {
-        width: 400px;
+        width: 400px;               
         min-width: 400px;
     }
 
+    /* Adjust form width for smaller screens */
     .user-form {
         padding: 0;
         margin-top: 50px;
         width: 400px;
     }
 
+    /* Smaller reindeer images */
     .reindeer-left, .reindeer-right {
         width: 50px;
     }
 
+    /* Smaller social media icons */
     .social-medias {
         width: 300px;
     }
@@ -212,6 +210,7 @@
         width: 30px;
     }
 
+    /* Reduce the size of learn more button */
     .learn-more {
         width: 150px;
         height: 40px;
@@ -219,10 +218,12 @@
 
     }
 
+    /* Adjust holly icon size */
     .holly-icon {
         width: 50px;
     }
 
+    /* Further reduce section heights for mobile screens */
     #section1 {
         height: 375px;
     }
@@ -243,41 +244,40 @@
         height: 500px;
     }
 
+    /* Align contact icons vertically */
     .contacts {
         flex-direction: column;
         align-items: center;
     }
 
+    /* Reduce height of tree background */
     .trees {
         height: 150px;
         background-size: auto 150px;
     }
 
+    /* Smaller buy now button */
     .buy-now {
         width: 200px;
         height: 50px;
         margin-top: 25px;
     }
 
+    /* Adjust text size */
     .summary {
         font-size: 1rem;
     }
 
+    /* Adjust hover text position and size */
     .hover-text {
         width: 100px;
         top: -5px;
         right: 130px;
     }
 
+    /* Ensure contact icons take full width */
     .way-of-contact {
         width: 100%;
         margin: 5px 0;
     }
 }
-
-/* @media screen and (max-width: 599px) {
-    body {
-        /* transform: scale(1); */
-        scale: 1;
-    }
-} */

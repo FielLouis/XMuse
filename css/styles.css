@@ -1,3 +1,4 @@
+/* Font-face declarations for custom fonts */
 @font-face {
     font-family: Chunk;
     src: url("../fonts/Chunk.ttf");
@@ -24,21 +25,23 @@
     font-style: normal;
 }
 
+/* Initialize CSS variables (custom properties) */
 :root {
-    --main-color: #AD0101;
-    --white: white;
-    --fade-white: rgba(255, 255, 255, 0.5);
-    --snow-white: #E9F8F9;
-    --gray: #353535;
-    --green: #95D830;
-    font-size: 24px;
+    --main-color: #AD0101;        /* Main red color */
+    --white: white;               /* Standard white */
+    --fade-white: rgba(255, 255, 255, 0.5); /* Semi-transparent white */
+    --snow-white: #E9F8F9;        /* Light snowy white */
+    --gray: #353535;              /* Dark gray */
+    --green: #95D830;             /* Bright green */
+    font-size: 24px;                /* Default font size */
 }
 
 body {
-    min-width: 600px;
-    overflow-x: hidden;
+    min-width: 600px;               /* Ensure body has a minimum width */
+    overflow-x: hidden;             /* Prevent horizontal scrolling */
 }
 
+/* Font styling for different classes using the defined @font-face fonts */
 .chunk {
     font-family: Chunk;
     letter-spacing: 3px;
@@ -58,49 +61,47 @@ body {
     font-family: Raleway;
 }
 
+/* Reset margins and paddings for all elements */
 * {
     margin: 0;
     padding: 0;
 }
 
 html { 
-    scroll-behavior: smooth;
+    scroll-behavior: smooth;        /* Smooth scrolling for internal links */
 }
 
-
-/* .main-nav {
-    width: 1000px;
-    margin: 0 auto;
-    padding: 0 100px;
-    position: fixed;
-    z-index: 1000;
-    top: 20px;
-    color: yellow;
-} */
-
-.sidebar {
+/* Setting the nav */
+nav {
     position: fixed;
     top: 50%;
     right: 20px;
-    transform: translateY(-50%);
+    transform: translateY(-50%);    /* Center vertically */
     display: flex;
     flex-direction: column;
-    gap: 10px;
-    z-index: 1000;
+    gap: 10px;                      /* Space between elements */
+    z-index: 1000;                  /* Ensures it stays on top of other content */
+}  
+
+ul {
+    list-style: none;               /* Remove bullets from list */
 }
 
+/* Circle elements that act as menu items */
 .circle {
     width: 20px;
     height: 20px;
     background: url('../img/menu_item_normal.png') no-repeat center;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease; /* Smooth background transition */
 }
 
+/* Change circle background on hover */
 .circle:hover {
     background: url('../img/menu_item_active.png') no-repeat center;
 }
 
+/* Hidden hover text that shows up when hovering on a circle */
 .hover-text {
     display: none;
     position: relative;
@@ -117,10 +118,12 @@ html {
     font-size: 1rem;
 }
 
+/* Show hover text when hovering over the circle */
 .circle:hover .hover-text {
     display: block;
 }
 
+/* Image wrappers with automatic width adjustment */
 .image-wrapper {
     width: 100%;
     height: auto;
@@ -128,11 +131,13 @@ html {
     margin: 0;
 }
 
+/* Wrapper for product images with a set width */
 .product-image-wrapper {
     width: 280px;
     height: auto;
 }
 
+/* h2 and h3 with negative margins */
 h2 {
     font-size: 2rem;
     margin-bottom: -100px;
@@ -143,15 +148,18 @@ h3 {
     margin-bottom: -50px;
 }
 
+/* Summary text with small size and bold weight */
 .summary {
     font-size: .8rem;
     font-weight: bold;
 }
 
+/* Section styling with full width for red and white sections */
 .red-section, .white-section {
     width: 100%;
 }
 
+/* Background color for red and white sections */
 .red-section {
     background-color: var(--main-color);
 }
@@ -160,6 +168,7 @@ h3 {
     background-color: var(--snow-white);
 }
 
+/* Snow pattern background */
 .bg-snow {
     width: 100%;
     height: 100%;
@@ -168,6 +177,7 @@ h3 {
     transition: background-position 0.1s ease-out;
 }
 
+/* Trees background pattern */
 .trees {
     position: relative;
     width: 100%;
@@ -177,11 +187,13 @@ h3 {
     bottom: -6px;
 }
 
+/* Footer snow pattern positioning */
 .footer-snow {
     position: relative;
     top: -10px;
 }
 
+/* Reindeers flexbox layout */
 .reindeers {
     width: 100%;
     display: flex;
@@ -190,21 +202,25 @@ h3 {
     align-items: center;
 }
 
+/* Reindeer elements with transition */
 .reindeer-left, .reindeer-right {
     width: 125px;
     height: 100%;
     transition: background-position 0.1s ease-out;
 }
 
+/* Image elements full width */
 img {
     width: 100%;
     height: auto;
 }
 
+/* Utility class to align content at the bottom */
 .bottom-0 {
     bottom: 0;
 }
 
+/* Color utility classes */
 .white {
     color: var(--white);
 }
@@ -213,6 +229,7 @@ img {
     color: var(--gray);
 }
 
+/* Main section styling with flexbox */
 .section {
     width: 1200px;
     margin: 0 auto;
@@ -224,6 +241,7 @@ img {
     flex-direction: column;
 }
 
+/* Individual sections with specific heights */
 #section1 {
     height: 1100px;
 }
@@ -250,6 +268,7 @@ img {
     height: 500px;
 }
 
+/* Content styling inside sections */
 .content {
     width: inherit;
     height: inherit;
@@ -273,6 +292,7 @@ img {
     font-size: 6rem;
 }
 
+/* Divider element with width */
 .divider {
     width: 600px;
     margin: 0 auto;
@@ -282,6 +302,7 @@ img {
     margin-bottom: -50px;
 }
 
+/* Learn more button with background image */
 .learn-more {
     background-image: url('../img/cta_button_normal.png');
     background-size: auto;
@@ -296,6 +317,7 @@ img {
     margin: 0 150px;
 }
 
+/* Buy now and Submit buttons styling */
 .buy-now, .submit {
     background-image: url('../img/buy_button_normal.png');
     background-size: auto;
@@ -310,6 +332,7 @@ img {
     font-weight: bold;
 }
 
+/* Text inside learn more button */
 .learn-more p {
     margin: 0;
     position: relative;
@@ -317,11 +340,13 @@ img {
     font-weight: 600;
 }
 
+/* Text inside buy now button */
 .buy-now p {
     font-size: 1rem;
     font-weight: 600;
 }
 
+/* Holly icon with centered alignment */
 .holly-icon {
     width: 100px;
     margin: 0 auto;
@@ -329,6 +354,7 @@ img {
     top: -70px;
 }
 
+/* Flexbox layouts for product display, contacts, and social media sections */
 .product-display, .contacts, .social-medias {
     display: flex;
     flex-direction: row;
@@ -336,6 +362,12 @@ img {
     padding: 30px 0;
 }
 
+/* Social media icon styling */
+.social-media {
+    cursor: pointer;
+}
+
+/* Product grid layout */
 .product {
     display: grid;
 }
@@ -347,6 +379,7 @@ img {
     position: relative;
 }
 
+/* Position the product image absolutely inside its container */
 .product-pic {
     position: absolute;
     top: 0;
@@ -354,19 +387,13 @@ img {
     cursor: pointer;
 }
 
-/* .product-pic-bg {
-    grid-area: 1 / 1 / 2 / 2;
-}
-
-.product-pic-pro {
-    grid-area: 1 / 1 / 2 / 2;
-} */
-
+/* Product details margin adjustment */
 .product-details {
     position: relative;
     margin-top: 200px;
 }
 
+/* Full-width iframe styling */
 iframe {
     width: 100%;
     margin: 0 auto;
@@ -377,24 +404,29 @@ iframe {
     padding: 50px 0;
 }
 
+/* Margin adjustment for section3 paragraph */
 #section3 p {
     margin-bottom: 50px;
 }
 
+/* Flexbox layout for details section */
 .details {
     display: flex;
     flex-direction: row;
 }
 
+/* Left child flexbox layout with text alignment */
 .details .left-child {
     text-align: left;
     flex: 3;
 }
 
+/* Right child flex length */
 .details .right-child {
     flex: 1;
 }
 
+/* Right child styling */
 .right-child {
     font-size: 1.5rem;
     font-weight: bold;
@@ -404,36 +436,43 @@ iframe {
     margin-bottom: 20px;
 }
 
+/* Product slider layout */
 .pic-slider {
     width: 1000px;
     margin: 0 auto;
     padding: 50px 0;
 }
 
+/* Slick slider previous and next button styling */
 .slick-prev, .slick-next {
     width: 120px;
     z-index: 99;
 }
 
+/* Styling for slick slider arrow icons */
 .slick-arrow:before {
     font-size: 2rem;
     color: var(--main-color);
 }
 
+/* Styling for slick slider dots */
 .slick-dots {
     bottom: 50px;
 }
 
+/* Active dot styling */
 .slick-dots li.slick-active button:before {
     font-size: 0.8rem;
     color: var(--white);
 }
 
+/* Inactive dot styling */
 .slick-dots li button:before {
     font-size: 0.5rem;
     color: var(--snow-white);
 }
 
+/* Form layout for user input */
 .user-form {
     display: flex;
     flex-direction: column;
@@ -445,6 +484,7 @@ iframe {
     padding: 50px;
 }
 
+/* Input fields styling inside the user form */
 .user-form input {
     width: 460px;
     padding: 20px;
@@ -454,6 +494,7 @@ iframe {
     padding-left: 20px;
 }
 
+/* Contact icons with clickable styling */
 .way-of-contact {
     width: 350px;
 }
@@ -467,12 +508,14 @@ iframe {
     width: 62px;
 }
 
+/* Social media section layout */
 .social-medias {
     width: 600px;
     margin: 30px auto;
     font-size: 1rem;
 }
 
+/* Social media icon wrapper */
 .social-medias .image-wrapper {
     border: 3px solid var(--gray);
     width: 60px;
@@ -480,6 +523,7 @@ iframe {
     border-radius: 100px;
 }
 
+/* Contact links hover effect */
 .contact {
     cursor: pointer;
 }
@@ -488,6 +532,7 @@ iframe {
     color: var(--green);
 }
 
+/* Footer styling */
 footer {
     background-color: var(--snow-white);
     text-align: center;
