@@ -16,13 +16,13 @@ window.addEventListener('scroll', function() {
     // getting the position based on the scroll activity
     const scrollPosition = window.scrollY;
 
-    // making all the backgrounds photos move left with separate speed
+    // making all the backgrounds photos move right with separate speed
     // with first bg photo moving slower than the second bg photo
     bgSnows.forEach((bgSnow) => {
         bgSnow.style.backgroundPosition = `${scrollPosition * 0.2}px 0, ${scrollPosition * 0.4}px 0`;
     });
 
-    // making all the tree backgrounds move right
+    // making all the tree backgrounds move left
     bgTrees.forEach((bgTree) => {
         bgTree.style.backgroundPosition = `-${scrollPosition * 0.6}px 0`;
     });
