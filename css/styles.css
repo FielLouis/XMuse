@@ -94,6 +94,7 @@ ul {
     background: url('../img/menu_item_normal.png') no-repeat center;
     cursor: pointer;
     transition: background-color 0.3s ease; /* Smooth background transition */
+    margin: 10px 0;
 }
 
 /* Change circle background on hover */
